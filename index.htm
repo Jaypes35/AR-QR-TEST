@@ -2,18 +2,18 @@
 <html>
     <head>
       <title>POM AR_QR TEST</title>
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+   <!--     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    
     <script src="https://raw.githubusercontent.com/fcor/arjs-gestures/master/gesture-detector.js"></script>
     <script src="https://raw.githubusercontent.com/fcor/arjs-gestures/master/gesture-handler.js"></script>
    </head> 
 
     <body style="margin : 0px; overflow: hidden;">       
-        <a-scene
+      <a-scene
          arjs
          embedded
          renderer="logarithmicDepthBuffer: true;"
@@ -23,23 +23,24 @@
         >
       
         <a-assets>
-            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/Jaypes35/test/master/Drummond.gltf"></a-asset-item>
+            <a-asset-item 
+                          id="animated-asset" 
+                          src="https://raw.githubusercontent.com/Jaypes35/test/master/Drummond.gltf"
+            >
+            </a-asset-item>
         </a-assets>
             
         <a-marker 
                   type="pattern" 
-                  url="https://raw.githubusercontent.com/Jaypes35/test/master/pattern-marker.patt"
-                  id="animated-marker" 
-            
+                  url="https://raw.githubusercontent.com/Jaypes35/test/master/pattern-marker.patt"   
                   smooth="true" 
                   smoothCount="10"
                   smoothTolerance=".01"
                   smoothThreshold="5"
-               
-            
                   raycaster="objects: .clickable"
                   emitevents="true"
                   cursor="fuse: false; rayOrigin: mouse" 
+                  id="animated-marker" 
          >
             
          <a-entity
@@ -49,7 +50,7 @@
               scale="0.05 0.05 0.05"
               rotation="270 0 0"
               class="clickable"
-              gesture-handler="minScale: 0.025; maxScale: 0.1"
+              gesture-handler="minScale: 0.02; maxScale: 0.15"
           >
           </a-entity>
             

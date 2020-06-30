@@ -31,10 +31,13 @@
                   type="pattern" 
                   url="https://raw.githubusercontent.com/Jaypes35/test/master/pattern-marker.patt">
                   id="animated-marker" 
-                  smooth="true" 
+            
+                <!--  smooth="true" 
                   smoothCount="10"
                   smoothTolerance=".01"
                   smoothThreshold="5"
+                -->
+            
                   raycaster="objects: .clickable"
                   emitevents="true"
                   cursor="fuse: false; rayOrigin: mouse" 
@@ -42,10 +45,10 @@
             
          <a-entity
               id="animated-model"
+              gltf-model="#animated-asset"
               position="-3 0 0"
               scale="0.05 0.05 0.05"
               rotation="270 0 0"
-              gltf-model="#animated-asset"
               class="clickable"
               gesture-handler="minScale: 0.25; maxScale: 10"
           >

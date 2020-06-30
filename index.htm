@@ -6,15 +6,50 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+   
+    <!-- import rotation.js script -->
+    <script src="https://raw.githubusercontent.com/Jaypes35/test/master/rotation.js"></script>
+      <!-- import scale.js script -->
+    <script src="https://raw.githubusercontent.com/Jaypes35/test/master/scale.js"></script>
+    
     <body style="margin : 0px; overflow: hidden;">
-        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-       <a-marker smooth="true" type="pattern" url="https://raw.githubusercontent.com/Jaypes35/test/master/pattern-marker.patt">
-            <a-entity
-            position="-3 0 0"
-            scale="0.05 0.05 0.05"
-            rotation="270 0 0"
-            gltf-model="https://raw.githubusercontent.com/Jaypes35/test/master/Drummond.gltf"
-            ></a-entity>
+       
+        <a-scene
+         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+         embedded
+         renderer="logarithmicDepthBuffer: true;"
+         vr-mode-ui="enabled: false"
+         gesture-detector
+         id="scene"
+        >
+      
+        <a-assets>
+            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/Jaypes35/test/master/Drummond.gltf"></a-asset-item>
+        </a-assets>
+            
+        <a-marker markerhandler 
+                  type="pattern" 
+                  url="https://raw.githubusercontent.com/Jaypes35/test/master/pattern-marker.patt">
+                  id="animated-marker" 
+                  smooth="true" 
+                  smoothCount="10"
+                  smoothTolerance=".01"
+                  smoothThreshold="5"
+                  raycaster="objects: .clickable"
+                  emitevents="true"
+                  cursor="fuse: false; rayOrigin: mouse" 
+         >
+            
+         <a-entity
+              id="animated-model"
+              position="-3 0 0"
+              scale="0.05 0.05 0.05"
+              rotation="270 0 0"
+              gltf-model="#animated-asset"
+              class="clickable"
+              gesture-handler="minScale: 0.25; maxScale: 10"
+          >
+          </a-entity>
             
         </a-marker>
        <a-entity camera></a-entity>

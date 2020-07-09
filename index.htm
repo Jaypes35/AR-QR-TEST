@@ -13,7 +13,14 @@
     <script src="https://raw.githubusercontent.com/fcor/arjs-gestures/master/gesture-detector.js"></script>
     <script src="https://raw.githubusercontent.com/fcor/arjs-gestures/master/gesture-handler.js"></script>
    
-
+    <script>
+    // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
+    const sceneEl = document.querySelector('a-scene');
+    sceneEl.addEventListener('loaded', () => {
+        sceneEl.camera = new THREE.PerspectiveCamera();
+    });
+    </script>
+    
     <body>       
       <a-scene
          arjs

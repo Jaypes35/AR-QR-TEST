@@ -20,8 +20,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.200000
 illum 9
-map_Bump -s 0.250000 0.250000 1.000000 E:\\Documents\\ARTENGINE\\CONCRETE\\Concrete_RoughWall_Normal_2K.png
-map_Ns -s 0.250000 0.250000 1.000000 E:\\Documents\\ARTENGINE\\CONCRETE\\Concrete_RoughWall_Roughness_2K.png
+map_Bump -s 0.250000 0.250000 1.000000 Concrete_RoughWall_Normal_2K.png
+map_Ns -s 0.250000 0.250000 1.000000 Concrete_RoughWall_Roughness_2K.png
 
 newmtl concrete_wall
 Ns 225.000000
@@ -32,9 +32,9 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.200000
 illum 9
-map_Bump -bm 0.750000 -o 0.000000 0.300000 0.000000 -s 0.300000 0.400000 1.000000 E:\\Documents\\ARTENGINE\\CONCRETE\\Concrete_RoughWall_Normal_2K.png
-map_Kd -o 0.000000 0.300000 0.000000 -s 0.300000 0.400000 1.000000 E:\\Documents\\ARTENGINE\\CONCRETE\\Concrete_RoughWall_Albedo_4K.png
-map_Ns -o 0.000000 0.300000 0.000000 -s 0.300000 0.400000 1.000000 E:\\Documents\\ARTENGINE\\CONCRETE\\Concrete_RoughWall_Roughness_2K.png
+map_Bump -bm 0.750000 -o 0.000000 0.300000 0.000000 -s 0.300000 0.400000 1.000000 Concrete_RoughWall_Normal_2K.png
+map_Kd -o 0.000000 0.300000 0.000000 -s 0.300000 0.400000 1.000000 Concrete_RoughWall_Albedo_4K.png
+map_Ns -o 0.000000 0.300000 0.000000 -s 0.300000 0.400000 1.000000 Concrete_RoughWall_Roughness_2K.png
 
 newmtl floor
 Ns 225.000000
@@ -45,9 +45,9 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.200000
 illum 9
-map_Bump -bm 0.750000 -o 0.000000 0.300000 0.000000 -s 0.300000 0.400000 1.000000 E:\\Documents\\ARTENGINE\\CONCRETE\\Concrete_RoughWall_Normal_2K.png
-map_Kd -o 0.000000 0.300000 0.000000 -s 0.300000 0.400000 1.000000 E:\\Documents\\ARTENGINE\\CONCRETE\\Concrete_RoughWall_Albedo_4K.png
-map_Ns -o 0.000000 0.300000 0.000000 -s 0.300000 0.400000 1.000000 E:\\Documents\\ARTENGINE\\CONCRETE\\Concrete_RoughWall_Roughness_2K.png
+map_Bump -bm 0.750000 -o 0.000000 0.300000 0.000000 -s 0.300000 0.400000 1.000000 Concrete_RoughWall_Normal_2K.png
+map_Kd -o 0.000000 0.300000 0.000000 -s 0.300000 0.400000 1.000000 Concrete_RoughWall_Albedo_4K.png
+map_Ns -o 0.000000 0.300000 0.000000 -s 0.300000 0.400000 1.000000 Concrete_RoughWall_Roughness_2K.png
 
 newmtl floor_concrete
 Ns 225.000000
@@ -58,7 +58,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.200000
 illum 9
-map_Kd E:\\Downloads\\Environment\\Environment\\environment.fbm\\TexturesCom_ConcreteBare0356_9_seamless_S.png
+map_Kd TexturesCom_ConcreteBare0356_9_seamless_S.png
 
 newmtl metal_bar
 Ns 596.409057
@@ -79,8 +79,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.200000
 illum 9
-map_Kd E:\\Downloads\\Environment\\Environment\\environment.fbm\\paving_albedo.png
-map_d E:\\Downloads\\Environment\\Environment\\environment.fbm\\paving_albedo.png
+map_Kd paving_albedo.png
+map_d paving_albedo.png
 
 newmtl window_glass
 Ns 882.090000

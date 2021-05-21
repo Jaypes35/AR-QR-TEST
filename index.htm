@@ -22,11 +22,8 @@
         >
       
         <a-assets>
-            <a-asset-item 
-                          id="animated-asset" 
-                          src="https://raw.githubusercontent.com/Jaypes35/test/master/REM.gltf"
-            >
-            </a-asset-item>
+            <a-asset-item id="REM-obj" src="https://raw.githubusercontent.com/Jaypes35/test/master/REM.obj"></a-asset-item>
+            <a-asset-item id="REM-mtl" src="https://raw.githubusercontent.com/Jaypes35/test/master/REM.mtl"></a-asset-item>
         </a-assets>
             
         <a-marker 
@@ -43,8 +40,7 @@
          >
             
          <a-entity
-              id="animated-model"
-              gltf-model="#animated-asset"
+              obj-model="obj: #REM-obj; mtl: #REM-mtl"
               position="0 0 0"
               scale="0.00025 0.00025 0.00025"
               rotation="0 0 0"

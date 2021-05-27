@@ -1,59 +1,53 @@
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-
-<style>
-  .arjs-loader {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .arjs-loader div {
-    text-align: center;
-    font-size: 1.25em;
-    color: white;
-  }
-</style>
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>POM AR_QR TEST</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles.css">
+    </head> 
     
- <body style="margin : 0px; overflow: hidden;">
-  <!-- minimal loader shown until image descriptors are loaded -->
-  <div class="arjs-loader">
-    <div>Loading, please wait...</div>
-  </div>
-  <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-  >
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+   
+    
+    <body>       
+      <a-scene
+         embedded 
+         arjs
+         renderer="logarithmicDepthBuffer: true;"
+         vr-mode-ui="enabled: false"
+         id="scene"
+        >
         <a-assets>
             <a-asset-item id="REM-obj" src="https://raw.githubusercontent.com/Jaypes35/test/master/REMtri.obj"></a-asset-item>
             <a-asset-item id="REM-mtl" src="https://raw.githubusercontent.com/Jaypes35/test/master/REM.mtl"></a-asset-item>
         </a-assets>
             
-           <a-nft
-      type="nft"
-      url="https://raw.githubusercontent.com/Jaypes35/test/master/IMAGE/QR"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
+        <a-marker 
+                  type="pattern" 
+                  url="https://raw.githubusercontent.com/Jaypes35/test/master/pattern-marker.patt"   
+                  smooth="true" 
+                  smoothCount="10"
+                  smoothTolerance=".1"
+                  smoothThreshold="5"
+                  raycaster="objects: .clickable"
+                  emitevents="true"
+                  cursor="fuse: false; rayOrigin: mouse" 
+                  id="animated-marker" 
          >
             
          <a-entity
               obj-model="obj: #REM-obj; mtl: #REM-mtl"
               position="0 0 0"
-              scale="0.05 0.05 0.05"
+              scale="0.02 0.02 0.02"
+              rotation="0 0 0"
           >
           </a-entity>
-        </a-nft>
+            
+        </a-marker>
        <a-entity camera></a-entity>
         </a-scene>
     </body>
+</html>
